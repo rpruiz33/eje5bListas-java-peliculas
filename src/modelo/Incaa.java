@@ -43,18 +43,18 @@ public class Incaa {
 	}
 	
 
-    public Pelicula traerPeliculaPorGenero(Genero genero) {
-    	Pelicula pelicula=new Pelicula();
+    public List<Pelicula> traerPeliculaPorGenero(Genero genero) {
+    	 List<Pelicula> peliculas= new ArrayList<>();
     	int i = 0;
 		while (i < catalogo.size()) {
 			if (catalogo.get(i).getGenero().equals(genero)) {
-				pelicula = catalogo.get(i);
-				
+				peliculas.add(catalogo.get(i));
+			
 			}
 			i++;
 
 		}
-		return pelicula;
+		return peliculas;
 	}
     
 }

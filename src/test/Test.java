@@ -31,10 +31,9 @@ public class Test {
 //			
 //		}
 		System.out.println("**********Buscando por genero2222****************");
-		for (int i = 0; i<incaa.getCatalogo().size();i++) {
-			System.out.println(incaa.traerPeliculaPorGenero(genero).toString());
+		System.out.println(incaa.traerPeliculaPorGenero(genero).toString());
 		
 	}
 	}
 
-}
+
