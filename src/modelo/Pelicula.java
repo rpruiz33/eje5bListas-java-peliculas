@@ -46,7 +46,7 @@ public Pelicula() {
 }
 @Override
 public String toString() {
-    return "Pelicula: " + pelicula + ", Genero: " + genero;
+    return "Pelicula: " + pelicula + ", Genero: " +genero.mostrar();
 }
 
 }

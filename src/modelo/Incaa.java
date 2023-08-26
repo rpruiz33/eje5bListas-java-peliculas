@@ -29,14 +29,33 @@ public class Incaa {
         catalogo.add(nuevaPelicula);
         return true;
     }
+	public Pelicula traerPelicula(String partePelicula) {
+		int i = 0;
+		Pelicula pelicula = new Pelicula();
+		while (i < catalogo.size()) {
+			if (catalogo.get(i).getPelicula().contains(partePelicula)) {
+				pelicula = catalogo.get(i);
+			}
+			i++;
+
+		}
+		return pelicula;
+	}
+	
 
     public Pelicula traerPeliculaPorGenero(Genero genero) {
-        for (Pelicula pelicula : catalogo) {
-            if (pelicula.getGenero() != null && pelicula.getGenero().equals(genero)) {
-                return pelicula; // Retorna la primera película con el género especificado
-            }
-        }
-        return null; // Retorna null si no se encuentra ninguna película con el género
-    }
+    	Pelicula pelicula=new Pelicula();
+    	int i = 0;
+		while (i < catalogo.size()) {
+			if (catalogo.get(i).getGenero().equals(genero)) {
+				pelicula = catalogo.get(i);
+				
+			}
+			i++;
+
+		}
+		return pelicula;
+	}
     
 }
+
