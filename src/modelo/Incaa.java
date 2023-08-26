@@ -19,13 +19,13 @@ public class Incaa {
         this.catalogo = catalogo;
     }
 
-    public boolean agregarPelicula(String pelicula) {
+    public boolean agregarPelicula(String pelicula,Genero genero) {
         for (int i = 0; i < catalogo.size(); i++) {
             if (pelicula.equals(catalogo.get(i).getPelicula())) {
                 return false;
             }
         }
-        Pelicula nuevaPelicula = new Pelicula(catalogo.size() + 1, pelicula);
+        Pelicula nuevaPelicula = new Pelicula(catalogo.size() + 1, pelicula, genero);
         catalogo.add(nuevaPelicula);
         return true;
     }
@@ -38,4 +38,5 @@ public class Incaa {
         }
         return null; // Retorna null si no se encuentra ninguna película con el género
     }
+    
 }

@@ -9,11 +9,6 @@ private int id_pelicula;
 private String pelicula;
 private Genero genero;
 
-public Pelicula(int id_pelicula, String pelicula) {
-	super();
-	this.id_pelicula = id_pelicula;
-	this.pelicula = pelicula;
-}
 
 public int getId_pelicula() {
 	return id_pelicula;
@@ -53,8 +48,6 @@ public Pelicula() {
 public String toString() {
     return "Pelicula: " + pelicula + ", Genero: " + genero;
 }
-public void mostrar(Genero genero) {
-System.out.println(genero);
-}
+
 }
  

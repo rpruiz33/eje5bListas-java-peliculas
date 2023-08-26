@@ -29,4 +29,8 @@ public class Genero {
     public Genero() {
         super();
     }
+    public String mostrar(Genero genero) {
+    	return "genero"+ genero;
+    	
+    }
 }

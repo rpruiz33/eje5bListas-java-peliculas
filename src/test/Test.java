@@ -1,5 +1,6 @@
 package test;
 import java.util.List;
+
 import modelo.Incaa;
 import modelo.Pelicula;
 import modelo.Genero;
@@ -9,16 +10,21 @@ public class Test {
 		// TODO Auto-generated method stub
 		Incaa incaa=new Incaa();
 		Genero genero=new Genero(3,"accion");
-		System.out.println(genero.toString()); 
-		Pelicula pelicula=new Pelicula(1,"volver al futuro2",genero);
-		Pelicula pelicula2=new Pelicula(1,"volver al futuro2",genero);
-		Pelicula pelicula3=new Pelicula(1,"volver al futuro2",genero);
-		incaa.agregarPelicula(pelicula.toString());
-		incaa.agregarPelicula(pelicula2.toString());
-		incaa.agregarPelicula(pelicula3.toString());
+		Genero genero1=new Genero(3,"accion");
+		System.out.println(genero.getGenero()); 
+	
+		incaa.agregarPelicula("volver al futuro2",genero);
+		incaa.agregarPelicula("ASDASD",genero);
+		incaa.agregarPelicula("river", genero1);
 		System.out.println("**********Buscando por genero****************");
 		for (int i = 0; i<incaa.getCatalogo().size();i++) {
-			System.out.println(incaa.getCatalogo().get(i).toString());
+			
+			if(incaa.getCatalogo().get(i).getGenero()==genero) {
+				
+				System.out.println(incaa.getCatalogo().get(i).getPelicula()+" genero "+ genero.getGenero()+" ");
+
+			
+			}
 		}
 		
 	}
