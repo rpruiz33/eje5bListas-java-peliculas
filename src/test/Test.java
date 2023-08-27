@@ -12,13 +12,13 @@ public class Test {
 		// TODO Auto-generated method stub
 		Incaa incaa=new Incaa();
 		Genero genero=new Genero(3,"accion");
-		Genero genero1=new Genero(3,"accion");
+		Genero genero1=new Genero(3,"");
 		
 
 	
 		incaa.agregarPelicula("volver al futuro2",genero);
-		incaa.agregarPelicula("ASDASD",genero);
-		incaa.agregarPelicula("river", genero1);
+		incaa.agregarPelicula("ASDASD",genero1);
+		incaa.agregarPelicula("river", genero);
 //		System.out.println("**********Buscando por genero****************");
 //		for (int i = 0; i<incaa.getCatalogo().size();i++) {
 //			
@@ -31,8 +31,8 @@ public class Test {
 //			
 //		}
 		System.out.println("**********Buscando por genero2222****************");
-		System.out.println(incaa.traerPeliculaPorGenero(genero).toString());
-		
+			incaa.traerPeliculaPorGenero(genero);
+
 	}
 	}
 

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Incaa {
+	List<Pelicula> catalogo1=new ArrayList<Pelicula>();
+	
     private List<Pelicula> catalogo;
 
     public Incaa() {
@@ -43,19 +45,20 @@ public class Incaa {
 	}
 	
 
-    public List<Pelicula> traerPeliculaPorGenero(Genero genero) {
-    	 List<Pelicula> peliculas= new ArrayList<>();
-    	int i = 0;
-		while (i < catalogo.size()) {
-			if (catalogo.get(i).getGenero().equals(genero)) {
-				peliculas.add(catalogo.get(i));
-			
-			}
-			i++;
-
-		}
-		return peliculas;
+	public Pelicula traerPeliculaPorGenero(Genero genero) {
+		Pelicula pelicula=new Pelicula();
+	    for (int i = 0; i < catalogo.size(); i++) {
+	         pelicula = catalogo.get(i);
+	        
+	        if (pelicula.getGenero().equals(genero)) {
+	          
+	            System.out.println("Nombre: " + pelicula.getPelicula() + ", Género: " + pelicula.getGenero().mostrar());
+	        }
+	    }
+	    
+	    return pelicula;
 	}
+
     
 }
 
